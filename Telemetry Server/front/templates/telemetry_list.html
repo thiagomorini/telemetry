@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Telemetry List</h1>
+      <button type="button" class="btn btn-primary" onclick="window.location.reload();">Refresh</button>
+      <p>
+      <div id="accordion">
+        {% for player, telemetries in player_telemetries.items %}
+          <div class="card">
+            <div class="card-header" id="heading-{{ player.id }}">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-{{ player.id }}" aria-expanded="true" aria-controls="collapse-{{ player.id }}">
+                  Player: {{ player.username }}
+                </button>
+              </h5>
+            </div>
+            <div id="collapse-{{ player.id }}" class="collapse show" aria-labelledby="heading-{{ player.id }}" data-parent="#accordion">
+              <div class="card-body">
+                {% if telemetries %}
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Date and time</th>
+                        <th>Position X</th>
+                        <th>Position Y</th>
+                        <th>Position Z</th>
+                        <th>Pressed Keys</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for telemetry in telemetries %}
+                        <tr>
+                          <td>{{ telemetry.datetime }}</td>
+                          <td>{{ telemetry.position_x }}</td>
+                          <td>{{ telemetry.position_y }}</td>
+                          <td>{{ telemetry.position_z }}</td>
+                          <td>{{ telemetry.keys_pressed }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% else %}
+                  <p>No telemetries found.</p>
+                {% endif %}
+              </div>
+            </div>          
+          </div>
+          <br>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
