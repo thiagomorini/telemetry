@@ -1,8 +1,8 @@
 # Telemetry
 
-Este é um projeto conceito de um servidor de telemetria construído com Django REST Framework, Socket e Pygame. O client permite o envio de telemetria de um jogo em 3D em tempo real para o server Socket, e um frontend em um navegador permite a visualização da telemetria. O projeto é dividido em quatro partes: o servidor da API, o servidor Socket, o cliente Pygame e o frontend para a visualização.
+This is a concept project for a telemetry server built with Django REST Framework, Socket, and Pygame. The client allows real-time telemetry sending of a 3D game to the Socket server, and a frontend in a browser allows telemetry visualization. The project is divided into four parts: the API server, the Socket server, the Pygame client, and the frontend for visualization.
 
-## Tecnologias utilizadas
+## Used technologies
 
 - Python 3.11
 - Django 4.2
@@ -11,84 +11,78 @@ Este é um projeto conceito de um servidor de telemetria construído com Django 
 - Game Engine pygame 2.1.3
 - PyQt5 5.15.9
 
-## Instalação e execução
+## Installation and execution
 
-Clone o repositório para o seu computador:
+Clone the repository to your computer:
 
 ```
 git clone https://github.com/thiagomorini/telemetry.git
 ```
 
-Certifique-se de que o Python 3.8 ou superior esteja instalado em sua máquina. Caso não esteja, você pode instalá-lo usando o seguinte comando:
+Make sure that Python 3.8 or higher is installed on your machine. If it is not, you can install it using the following command:
 
 ```
 sudo apt install python3
 ```
 
-### API Server, Socket Server e o Frontend para a visualização das telemetrias
+### API Server, Socket Server, and the Frontend for telemetry visualization
 
-Para executar o servidor da API, siga os seguintes passos:
+To run the API server, follow these steps:
 
-1. Acesse o diretório do projeto: Telemetry Server.
+1. Access the project directory: Telemetry Server.
 
-2. Instale as dependências do projeto.
+2. Install the project dependencies.
 
-3. Execute as migrações do banco de dados:
+3. Run the database migrations:
 
 ```
 python manage.py migrate
 ```
 
-4. Execute o servidor:
+4. Run the server:
 
 ```
 python manage.py runserver
 ```
 
-5. Acesse a API do projeto em seu navegador através do endereço http://127.0.0.1:8000/api/telemetry/
+5. Access the project's API in your browser through the address http://127.0.0.1:8000/api/telemetry/
 
-6. Acesse o frontend do projeto em seu navegador através do endereço http://127.0.0.1:8000/telemetry/
+6. Access the project's frontend in your browser through the address http://127.0.0.1:8000/telemetry/
 
-Para executar o servidor Socket, siga os seguintes passos:
+To run the Socket server, follow these steps:
 
-1. Acesse o diretório do projeto: Telemetry Server\game_server
+1. Access the project directory: Telemetry Server\game_server.
 
-2. Execute o servidor:
+2. Run the server:
 
 ```
 python socket_server.py  
 ```
 
-### Socket Client com o jogo
+### Socket Client with the game
 
-Para executar o Socket Client, siga os seguintes passos:
+To run the Socket Client, follow these steps:
 
-1. Acesse o diretório do projeto: Telemetry Client.
+1. Access the project directory: Telemetry Client.
 
-2. Instale as dependências do projeto.
+2. Install the project dependencies.
 
-3. Execute o client:
+3. Run the client:
 
 ```
 python main.py  
 ```
 
+## Contribution
 
+You can contribute to the project in several ways:
 
+1. Reporting bugs and issues on Github.
+2. Making pull requests with fixes and new features.
+3. Sharing the project and encouraging other developers to use it.
 
+## Licence
+This project is distributed under the MIT license.
 
-
-
-## Contribuição
-
-Você pode contribuir com o projeto de várias formas:
-
-1. Reportando bugs e problemas no Github.
-2. Fazendo pull requests com correções e novas funcionalidades.
-3. Compartilhando o projeto e incentivando outros desenvolvedores a usá-lo.
-
-## Licença
-Este projeto é distribuído sob a licença MIT.
-
-## Contato
-Você pode entrar em contato comigo sempre que tiver alguma dúvida ou sugestão de melhorias.
+## Contact
+You can contact me anytime you have questions or suggestions for improvement.
